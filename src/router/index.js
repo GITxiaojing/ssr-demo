@@ -1,8 +1,16 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import { StaticRouter, BrowserRouter } from 'react-router-dom';
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
 import Home from '../pages/Home';
 import Todo from '../pages/Todo/index.jsx'
+
+const reducer = (state = { name:'fxj' }, action) => {
+  return state;
+}
+const store = createStore(reducer, applyMiddleware(thunk));
 
 const Router = (
   <div>
@@ -12,9 +20,11 @@ const Router = (
 )
 
 export const clientRouter = (
-  <BrowserRouter>
-    {Router}
-  </BrowserRouter>
+  <Provider store={store}>
+    <BrowserRouter>
+      {Router}
+    </BrowserRouter>
+  </Provider>
 )
 
 export const serverRouter = (req) => {
@@ -22,8 +32,10 @@ export const serverRouter = (req) => {
     //在服务端我们需要使用StaticRouter来替代BrowserRouter   
     //传入当前path
     //context为必填参数,用于服务端渲染参数传递
-    <StaticRouter location={req.path} context={{}}>
-      {Router}
-    </StaticRouter>
+    <Provider store={store}>
+      <StaticRouter location={req.path} context={{}}>
+        {Router}
+      </StaticRouter>
+    </Provider>
   )
 }
