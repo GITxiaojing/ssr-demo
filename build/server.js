@@ -86,15 +86,51 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/client/Home/index.js":
+/***/ "./src/pages/Header/index.js":
+/*!***********************************!*\
+  !*** ./src/pages/Header/index.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"react\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactRouterDom = __webpack_require__(/*! react-router-dom */ \"react-router-dom\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar Header = function Header() {\n  return _react2.default.createElement(\n    'div',\n    null,\n    _react2.default.createElement(\n      _reactRouterDom.Link,\n      { to: '/' },\n      'Home'\n    ),\n    _react2.default.createElement(\n      _reactRouterDom.Link,\n      { to: '/todo' },\n      'Todo'\n    )\n  );\n};\n\nexports.default = Header;\n\n//# sourceURL=webpack:///./src/pages/Header/index.js?");
+
+/***/ }),
+
+/***/ "./src/pages/Home/index.js":
+/*!*********************************!*\
+  !*** ./src/pages/Home/index.js ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"react\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _Header = __webpack_require__(/*! ../Header */ \"./src/pages/Header/index.js\");\n\nvar _Header2 = _interopRequireDefault(_Header);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar Home = function Home() {\n  return _react2.default.createElement(\n    'div',\n    null,\n    _react2.default.createElement(_Header2.default, null),\n    _react2.default.createElement(\n      'div',\n      null,\n      'This is a react component\\uFF01'\n    ),\n    _react2.default.createElement(\n      'p',\n      null,\n      'test change'\n    ),\n    _react2.default.createElement(\n      'button',\n      {\n        type: 'button',\n        onClick: function onClick(e) {\n          console.log(1111, 'click');\n        }\n      },\n      'click me'\n    )\n  );\n};\n\nexports.default = Home;\n\n//# sourceURL=webpack:///./src/pages/Home/index.js?");
+
+/***/ }),
+
+/***/ "./src/pages/Todo/index.jsx":
 /*!**********************************!*\
-  !*** ./src/client/Home/index.js ***!
+  !*** ./src/pages/Todo/index.jsx ***!
   \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"react\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar Home = function Home() {\n  return _react2.default.createElement(\n    'div',\n    null,\n    _react2.default.createElement(\n      'div',\n      null,\n      'This is a react component\\uFF01'\n    ),\n    _react2.default.createElement(\n      'p',\n      null,\n      'test change'\n    ),\n    _react2.default.createElement(\n      'button',\n      {\n        type: 'button',\n        onClick: function onClick(e) {\n          console.log(1111, 'click');\n        }\n      },\n      'click me'\n    )\n  );\n};\n\nexports.default = Home;\n\n//# sourceURL=webpack:///./src/client/Home/index.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = __webpack_require__(/*! react */ \"react\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _Header = __webpack_require__(/*! ../Header */ \"./src/pages/Header/index.js\");\n\nvar _Header2 = _interopRequireDefault(_Header);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar Todo = function (_React$Component) {\n  _inherits(Todo, _React$Component);\n\n  function Todo() {\n    _classCallCheck(this, Todo);\n\n    return _possibleConstructorReturn(this, (Todo.__proto__ || Object.getPrototypeOf(Todo)).apply(this, arguments));\n  }\n\n  _createClass(Todo, [{\n    key: 'render',\n    value: function render() {\n      return _react2.default.createElement(\n        'div',\n        null,\n        _react2.default.createElement(_Header2.default, null),\n        _react2.default.createElement(\n          'h1',\n          null,\n          'Todo Page'\n        )\n      );\n    }\n  }]);\n\n  return Todo;\n}(_react2.default.Component);\n\nexports.default = Todo;\n\n//# sourceURL=webpack:///./src/pages/Todo/index.jsx?");
+
+/***/ }),
+
+/***/ "./src/router/index.js":
+/*!*****************************!*\
+  !*** ./src/router/index.js ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.serverRouter = exports.clientRouter = undefined;\n\nvar _react = __webpack_require__(/*! react */ \"react\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactRouterDom = __webpack_require__(/*! react-router-dom */ \"react-router-dom\");\n\nvar _Home = __webpack_require__(/*! ../pages/Home */ \"./src/pages/Home/index.js\");\n\nvar _Home2 = _interopRequireDefault(_Home);\n\nvar _index = __webpack_require__(/*! ../pages/Todo/index.jsx */ \"./src/pages/Todo/index.jsx\");\n\nvar _index2 = _interopRequireDefault(_index);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar Router = _react2.default.createElement(\n  'div',\n  null,\n  _react2.default.createElement(_reactRouterDom.Route, { path: '/todo', exact: true, component: _index2.default }),\n  _react2.default.createElement(_reactRouterDom.Route, { path: '/', exact: true, component: _Home2.default })\n);\n\nvar clientRouter = exports.clientRouter = _react2.default.createElement(\n  _reactRouterDom.BrowserRouter,\n  null,\n  Router\n);\n\nvar serverRouter = exports.serverRouter = function serverRouter(req) {\n  return (\n    //在服务端我们需要使用StaticRouter来替代BrowserRouter   \n    //传入当前path\n    //context为必填参数,用于服务端渲染参数传递\n    _react2.default.createElement(\n      _reactRouterDom.StaticRouter,\n      { location: req.path, context: {} },\n      Router\n    )\n  );\n};\n\n//# sourceURL=webpack:///./src/router/index.js?");
 
 /***/ }),
 
@@ -106,7 +142,19 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _react = __webpack_require__(/*! react */ \"react\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _server = __webpack_require__(/*! react-dom/server */ \"react-dom/server\");\n\nvar _Home = __webpack_require__(/*! ../client/Home */ \"./src/client/Home/index.js\");\n\nvar _Home2 = _interopRequireDefault(_Home);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar express = __webpack_require__(/*! express */ \"express\");\nvar app = express();\nvar port = 3000;\napp.use(express.static('public'));\n\nvar content = (0, _server.renderToString)(_react2.default.createElement(_Home2.default, null));\n\napp.get('/', function (req, res) {\n  res.send('\\n    <html>\\n      <head>\\n        <title>\\n          ssr demo\\n        </title>\\n      </head>\\n      <body>\\n        <div id=\"root\">' + content + '</div>\\n        <script src=\"/index.js\"></script>\\n      </body>\\n    </html>\\n    ');\n});\n\napp.listen(port, function () {\n  console.log('example running on port ', port);\n});\n\n//# sourceURL=webpack:///./src/server/index.js?");
+eval("\n\nvar _render = __webpack_require__(/*! ./render */ \"./src/server/render.js\");\n\nvar _render2 = _interopRequireDefault(_render);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar express = __webpack_require__(/*! express */ \"express\");\nvar app = express();\nvar port = 3000;\napp.use(express.static('public'));\n\napp.get('*', function (req, res) {\n  res.send((0, _render2.default)(req));\n});\n\napp.listen(port, function () {\n  console.log('example running on port ', port);\n});\n\n//# sourceURL=webpack:///./src/server/index.js?");
+
+/***/ }),
+
+/***/ "./src/server/render.js":
+/*!******************************!*\
+  !*** ./src/server/render.js ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"react\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _server = __webpack_require__(/*! react-dom/server */ \"react-dom/server\");\n\nvar _router = __webpack_require__(/*! ../router */ \"./src/router/index.js\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nexports.default = function (req) {\n  var content = (0, _server.renderToString)((0, _router.serverRouter)(req));\n  return '\\n    <html>\\n      <head>\\n        <title>\\n          ssr demo\\n        </title>\\n      </head>\\n      <body>\\n        <div id=\"root\">' + content + '</div>\\n        <script src=\"/index.js\"></script>\\n      </body>\\n    </html>\\n    ';\n};\n\n//# sourceURL=webpack:///./src/server/render.js?");
 
 /***/ }),
 
@@ -140,6 +188,17 @@ eval("module.exports = require(\"react\");\n\n//# sourceURL=webpack:///external_
 /***/ (function(module, exports) {
 
 eval("module.exports = require(\"react-dom/server\");\n\n//# sourceURL=webpack:///external_%22react-dom/server%22?");
+
+/***/ }),
+
+/***/ "react-router-dom":
+/*!***********************************!*\
+  !*** external "react-router-dom" ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"react-router-dom\");\n\n//# sourceURL=webpack:///external_%22react-router-dom%22?");
 
 /***/ })
 
