@@ -1,16 +1,12 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import { StaticRouter, BrowserRouter } from 'react-router-dom';
-import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-import thunk from 'redux-thunk';
+import Store from '../redux/reducer';
 import Home from '../pages/Home';
 import Todo from '../pages/Todo/index.jsx'
 
-const reducer = (state = { name:'fxj' }, action) => {
-  return state;
-}
-const store = createStore(reducer, applyMiddleware(thunk));
+const store = Store();
 
 const Router = (
   <div>
